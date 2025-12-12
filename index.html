@@ -41,17 +41,20 @@
                 <div class="section-actions">
                     <button class="btn" onclick="resetDraw()">重新抽签</button>
                     <button class="btn primary" onclick="confirmDraw()">确认分组</button>
+                    <button class="btn" onclick="exportDrawResults()">导出结果</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importDrawResults(this)">
+                    <button class="btn" onclick="document.getElementById('importFile').click()">导入结果</button>
                 </div>
             </div>
             <div class="draw-container">
                 <div class="draw-section">
-                    <h3>直接晋级选手 (8名)</h3>
+                    <h3>直接晋级选手 (4名)</h3>
                     <div class="draw-list" id="direct-advance-list">
                         <!-- 直接晋级选手将通过JavaScript动态生成 -->
                     </div>
                 </div>
                 <div class="draw-section">
-                    <h3>待比赛选手分组 (8组)</h3>
+                    <h3>待比赛选手分组 (12组)</h3>
                     <div class="match-groups" id="match-groups">
                         <!-- 待比赛选手分组将通过JavaScript动态生成 -->
                     </div>
